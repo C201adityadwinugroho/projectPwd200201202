@@ -1,0 +1,94 @@
+/* main_glass.css */
+
+/* --- BACKGROUND/BODY STYLES (Glassmorphism Base) --- */
+body {
+    /* Menimpa style.css body */
+    background-color: transparent !important; 
+    
+    /* Latar Belakang Gambar & Overlay Gelap */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+        url('indexbg.jpeg.jpg'); /* Pastikan nama file gambar sudah benar */
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* --- HEADER BARU (Hanya Teks Putih, tanpa kotak biru) --- */
+header {
+    /* Menimpa style.css header */
+    background-color: transparent !important; 
+    color: white; 
+    padding: 20px 0 0 0 !important; 
+    margin-bottom: 0 !important;
+    text-align: center;
+    border-radius: 0 !important;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* --- KOTAK CONTAINER (Glassmorphism Effect) --- */
+.container {
+    /* Menimpa style.css .container */
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 16px; 
+    
+    /* Efek Buram */
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); 
+    
+    color: #ffffff; 
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* --- PENYESUAIAN ELEMEN DI DALAM CONTAINER --- */
+.form-section label {
+    color: #c0c0c0; 
+}
+.form-section input[type="text"], 
+.form-section input[type="number"],
+.form-section select {
+    /* Input field agar terlihat jelas di latar buram */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+}
+
+table {
+    color: #ffffff;
+}
+th {
+    background-color: rgba(0, 123, 255, 0.5) !important; 
+    color: white;
+}
+td {
+    border: 1px solid rgba(255, 255, 255, 0.3) !important; 
+}
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Penyesuaian Tombol Logout agar terlihat */
+.btn.logout { 
+    background-color: #dc3545; /* Merah agar mudah dilihat di latar gelap */
+    color: white; 
+    float: right; 
+    margin-top: -50px; 
+}
+
+/* Penyesuaian Warna Teks Heading di dalam Container */
+.container h2, .container p {
+    color: #ffffff;
+}
+.container a {
+    color: #007bff; /* Link seperti "Kembali ke Daftar Inventaris" */
+}

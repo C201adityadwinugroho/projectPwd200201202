@@ -1,0 +1,109 @@
+/* style.css */
+
+/* --- GENERAL RESET & SETUP --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/* --- BACKGROUND/BODY STYLES --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Latar Belakang Biru Gelap (Mirip Gambar) */
+    background-color: #0d1e57;
+    /* Jika Anda punya gambar latar belakang (misalnya background.jpg) 
+       dengan ornamen abstrak, hapus komentar di bawah ini:
+       background-image: url('background.jpg'); 
+       background-size: cover;
+       background-position: center;
+    */
+}
+
+/* --- LOGIN BOX (Glass Effect Panel) --- */
+.login-box {
+    /* Meniru Efek Kaca (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 16px; 
+    padding: 40px 35px;
+    width: 380px; 
+    
+    /* Efek Buram */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); 
+    color: #ffffff; 
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* --- FORM ELEMENTS --- */
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #c0c0c0;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 5px; 
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.login-box input:focus {
+    background-color: #ffffff;
+}
+
+/* --- BUTTON STYLES --- */
+.btn.primary {
+    background-color: #007bff; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 25px; 
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+
+/* --- ERROR MESSAGE --- */
+.message.error {
+    color: #ff6b6b; 
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}

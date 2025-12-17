@@ -1,0 +1,111 @@
+/* pilih_login.css (Glassmorphism Style) */
+
+/* --- GENERAL RESET & SETUP --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/* --- BACKGROUND/BODY STYLES --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    /* GANTI NAMA FILE GAMBAR JIKA BERBEDA */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+        url('indexbg.jpeg.jpg'); 
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* --- KOTAK BLUR (MENGGANTIKAN .role-selection) --- */
+.role-selection { 
+    /* Meniru Efek Kaca (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 16px; 
+    padding: 40px 35px;
+    width: 400px; 
+    text-align: center;
+    
+    /* Efek Buram */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); 
+    color: #ffffff; /* Warna teks umum */
+}
+
+.role-selection h2 { 
+    color: #ffffff; 
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Style untuk link (tombol) di halaman pilih_login.php */
+.role-selection a {
+    display: block;
+    margin: 20px 0;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+/* Style untuk input form di halaman login.php */
+.role-selection label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #c0c0c0; /* Warna label agar terlihat di latar gelap */
+}
+
+.role-selection input[type="text"],
+.role-selection input[type="password"] {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box; /* Penting untuk lebar 100% */
+}
+
+/* Tombol */
+.btn.admin { 
+    background-color: #007bff; /* Biru */
+    color: white; 
+}
+
+.btn.user { 
+    background-color: #28a745; /* Hijau */
+    color: white; 
+}
+
+/* Tombol Login di halaman login.php */
+.btn.primary {
+    background-color: #007bff; /* Biru default */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+}
